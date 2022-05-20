@@ -65,19 +65,18 @@ class _HomePageState extends State<HomePage> {
                 Map data = snapshot.data!.docs[index].data();
                 DateTime mydateTime = data['created'].toDate();
                 String formattedTime =
-                DateFormat.yMMMd().add_jm().format(mydateTime);
+                    DateFormat.yMMMd().add_jm().format(mydateTime);
 
                 return InkWell(
                   onTap: () {
                     Navigator.of(context)
                         .push(
                       MaterialPageRoute(
-                        builder: (context) =>
-                            ViewNote(
-                              data,
-                              formattedTime,
-                              snapshot.data!.docs[index].reference,
-                            ),
+                        builder: (context) => ViewNote(
+                          data,
+                          formattedTime,
+                          snapshot.data!.docs[index].reference,
+                        ),
                       ),
                     )
                         .then((value) {
@@ -115,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                           Container(
                             alignment: Alignment.topRight,
                             child: IconButton(
-                                onPressed: (){}, icon: Icon(Icons.delete)),
+                                onPressed: () {}, icon: Icon(Icons.delete)),
                           ),
                         ],
                       ),

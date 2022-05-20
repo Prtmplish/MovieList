@@ -29,27 +29,8 @@ class _AddNoteState extends State<AddNote> {
                       Navigator.of(context).pop();
                     }, icon: Icon(
                       Icons.arrow_back_ios
+                      , color: Colors.grey,
                     )),
-                    /*ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios_outlined,
-                        size: 24.0,
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          Colors.grey[700],
-                        ),
-                        padding: MaterialStateProperty.all(
-                          EdgeInsets.symmetric(
-                            horizontal: 25.0,
-                            vertical: 8.0,
-                          ),
-                        ),
-                      ),
-                    ),*/
                     //
                     ElevatedButton(
                       onPressed: add,
